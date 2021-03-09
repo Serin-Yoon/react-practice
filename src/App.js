@@ -1,23 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
 
-  let posts = '혜화 맛집';
-  function myfunc() {
-    return 100
-  }
+  let [글제목, 글제목변경] = useState('맛집 추천');
+  let [글제목2, 글제목변경2] = useState('카페 추천', '책방 추천'); //array 형태로 저장
 
   return (
     <div className="App">
       <div className="nav">
         menu
       </div>
-      <h4> { posts } </h4>
-      <h4> { myfunc() } </h4>
-      <img src={ logo } alt="logo" />
-      <div style={ {color: "blue", fontSize: "30px" }}>스타일 변경</div>
+      <div className="list">
+        <h3>{ 글제목 }</h3>
+        <p>2021년 3월 9일</p>
+        <hr /> 
+      </div>
     </div>
   );
 }
